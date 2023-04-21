@@ -1,5 +1,5 @@
 - name: Demo on Vars
-  hosts: local host
+  hosts: localhost
   vars:
     URL: play.example.com
   tasks:
