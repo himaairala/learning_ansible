@@ -58,7 +58,6 @@
       ansible.builtin.set_fact:
       UPTIME: "{{out.stdout}}"
 
-
     - name: Print OUT
       ansible.builtin.debug:
         msg: "{{UPTIME}}"
