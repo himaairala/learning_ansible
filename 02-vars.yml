@@ -48,7 +48,6 @@
 - name: Demo on runtime variables
   hosts: all
   connection: local
-
   tasks:
     - name: Execute Uptime Shell Command
       ansible.builtin.shell: uptime
@@ -56,7 +55,7 @@
 
     - name: Set a fact
       ansible.builtin.set_fact:
-      UPTIME: "{{out.stdout}}"
+       UPTIME: "{{out.stdout}}"
 
     - name: Print OUT
       ansible.builtin.debug:
