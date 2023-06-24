@@ -5,4 +5,4 @@
    tasks:
      - name: filter
        ansible.builtin.debug:
-         msg: "{{msg | split('/n')}}"
+         msg: "{{ CONTENT | split('/n')}}"
