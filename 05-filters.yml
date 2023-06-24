@@ -5,7 +5,7 @@
   tasks:
      - name: filter
        ansible.builtin.debug:
-         msg: "{{ CONTENT | split('/n') }}"
+         msg: "{{ CONTENT | split('\n') }}"
 
 #- name: filter
 #  hosts: localhost
