@@ -5,7 +5,7 @@
   tasks:
      - name: filter
        ansible.builtin.debug:
-         msg: "{{ CONTENT | split('\n') | regex_findall('Drink.*') }}"
+         msg: "{{ CONTENT | regex_findall('Drink.*') }}"
 
 #- name: filter
 #  hosts: localhost
