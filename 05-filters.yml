@@ -1,8 +1,8 @@
 - name: filter
   hosts: localhost
   vars:
-   CONTENT: "Fruit - Apple\nDrink - Coke\nFood - Burger"
-   tasks:
+    CONTENT: "Fruit - Apple\nDrink - Coke\nFood - Burger"
+  tasks:
      - name: filter
        ansible.builtin.debug:
          msg: "{{ CONTENT | split('/n') }}"
