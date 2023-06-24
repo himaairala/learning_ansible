@@ -1,17 +1,17 @@
-- name: filter
-  hosts: localhost
-  vars:
-   CONTENT: "Fruit - Apple\nDrink - coke\nFood - Burger"
-   tasks:
-     - name: filter
-       ansible.builtin.debug:
-         msg: "{{ CONTENT | split('/n') }}"
-
 #- name: filter
 #  hosts: localhost
 #  vars:
-#    CONTENT: "Fruit - Apple\nDrink - Coke\nFood - Burger"
-#  tasks:
-#    - name: filter
-#      ansible.builtin.debug:
-#        msg: "{{ CONTENT | regex_findall('Drink.*') }}"
+#   CONTENT: "Fruit - Apple\nDrink - coke\nFood - Burger"
+#   tasks:
+#     - name: filter
+#       ansible.builtin.debug:
+#         msg: "{{ CONTENT | split('/n') }}"
+
+- name: filter
+  hosts: localhost
+  vars:
+    CONTENT: "Fruit - Apple\nDrink - Coke\nFood - Burger"
+  tasks:
+    - name: filter
+      ansible.builtin.debug:
+        msg: "{{ CONTENT | regex_findall('Drink.*') }}"
