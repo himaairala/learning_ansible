@@ -1,0 +1,7 @@
+hosts: localhost
+vars:
+  CONTENT: "Fruit - Apple\nDrink - coke\nFood - Burger"
+  tasks:
+    - name: filter
+      ansible.builtin.debug:
+        msg: "{{msg | split('/n')}}"
